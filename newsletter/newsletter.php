@@ -3,7 +3,7 @@
 /*
 
 Plugin Name: Newsletter
-Description: Un plugin pour le compte a rebour d un lancement de produit
+Description: Un plugin cree une Db newsletter et sauvegarder les emails
 Version: 0.1
 Author: Tlacolley
 
@@ -33,6 +33,15 @@ class Newsletter_plugin{
 
 new Newsletter_plugin();
 
+if(isset($_POST['inputMail']) AND isset($_POST['inputMail'])){
+    $name = $_POST['inputName'];
+    $mail = $_POST['inputMail'];
+
+    $sql = "INSERT INTO newsletter_email (name, email) VALUES( '$name' , '$mail')";
+
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
+}
 
 
 
