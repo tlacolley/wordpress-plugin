@@ -1,14 +1,3 @@
-<?php
-
-/*
-
-Plugin Name: CountDown
-Description: Un plugin pour le compte a rebour d un lancement de produit
-Version: 0.1
-Author: Tlacolley
-
-*/
- ?>
 
 
 
